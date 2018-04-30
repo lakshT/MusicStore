@@ -14,13 +14,17 @@ namespace MusicStore.Models
         // automatically whenever you change your model schema, please use data migrations.
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
-    
+        
+        
         public MusicStoreContext() : base("name=MusicStoreContext")
         {
         }
+        
 
-        public System.Data.Entity.DbSet<MusicStore.Models.Review> Reviews { get; set; }
+        public DbSet<Review> Reviews { get; set; }
+        
+        public DbSet<Album> Albums { get; set; }
 
-        public System.Data.Entity.DbSet<MusicStore.Models.Album> Albums { get; set; }
+        public DbSet<Artist> Artists { get; set; }
     }
 }
